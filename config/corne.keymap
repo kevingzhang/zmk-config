@@ -63,7 +63,7 @@
    &trans     &none     &none    &none      &none      &none        &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans
    &trans     &none     &none    &none      &none      &none        &none     &none    &none      &none      &none    &trans
    &trans     &none     &none    &none      &none      &none        &none     &none    &none      &none      &none    &trans
-                        &trsna   &trans     &trans     &trans       &trans    &trans
+                        &trans   &trans     &trans     &trans       &trans    &trans
                         >;
                 };
         };
