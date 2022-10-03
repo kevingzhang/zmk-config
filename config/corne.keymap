@@ -17,12 +17,12 @@
 // | ALT TAB |  Q  |  W  |  E  |  R   |  T     |   |  Y      |  U   |  I   |  O  |  P  |  _    |
 // | CTRL ESC|  A  |  S  |  D  |  F   |  G     |   |  H      |  J   |  K   |  L  |GUI ;|CTRL ' |
 // | SHFT `  |  Z  |  X  |  C  |  V   |  B     |   |  N      |  M   |  ,   |  .  |  /  |SFT ENT|
-//                       | CTRL-| CGUI =|L2 BKSP |   |L1 SPACE |L3 [  | ALT ]|
+//                       | CTRL-| CGUI =|L2 BKSP |   |L1 SPACE |GUI [  | ALT ]|
                         bindings = <
    &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          &kp UNDERSCORE
    &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &mt RGUI SEMI &mt RCTRL SQT
    &mt LSHFT GRAVE &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH       &mt RSHFT ENTER
-                &mt LCTRL MINUS &mt LGUI EQUAL &lt 1 BKSP  &lt 1 SPACE &mt RGUI LBKT &mt RALT RBKT
+                &mt LCTRL MINUS &mt LGUI EQUAL &lt 2 BKSP  &lt 1 SPACE &mt RGUI LBKT &mt RALT RBKT
                         >;
                 };
                 right_layer {
@@ -35,7 +35,7 @@
    &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5          &kp N6    &kp N7       &kp N8    &kp N9     &kp N0    &kp PG_UP
    &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5          &kp CARET &kp AMPS     &kp STAR  &kp LPAR   &kp RPAR  &kp PG_DN 
    &trans    &kp F11      &kp F12      &kp F13      &kp F14      &kp F15         &kp LEFT  &kp DOWN     &kp UP    &kp RIGHT  &kp HOME  &kp END 
-                                       &trans       &trans       &lt 2 DEL       &trans    &trans       &trans
+                                       &trans       &trans       &lt 3 DEL       &trans    &trans       &trans
                         >;
                 };
 
@@ -49,7 +49,7 @@
    &trans    &kp N1   &kp N2   &kp N3       &kp N4        &kp N5       &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
    &kp BSLH  &kp EXCL &kp AT   &kp HASH     &kp DLLR      &kp PERCENT  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10  &trans
    &trans    &kp PIPE &kp PLUS &kp TILDE    &kp LBKT      &kp RBKT     &none     &none     &none     &none     &none    &trans
-                               &trans       &trans        &trans       &lt 2 ENTER &trans    &trans
+                               &trans       &trans        &trans       &lt 3 ENTER &trans    &trans
                         >;
                 };
 
