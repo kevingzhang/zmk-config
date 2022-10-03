@@ -19,8 +19,8 @@
 // | SHFT `  |  Z  |  X  |  C  |  V   |  B     |   |  N      |  M   |  ,   |  .  |  /  |SFT ENT|
 //                       | CTRL-| CGUI =|L2 BKSP |   |L1 SPACE |GUI [  | ALT ]|
                         bindings = <
-   &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          &kp UNDERSCORE
-   &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &mt RGUI SEMI &mt RCTRL SQT
+   &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          &mt RALT UNDERSCORE
+   &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
    &mt LSHFT GRAVE &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH       &mt RSHFT ENTER
                 &mt LCTRL MINUS &mt LGUI EQUAL &lt 2 BKSP  &lt 1 SPACE &mt RGUI LBKT &mt RALT RBKT
                         >;
