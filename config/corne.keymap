@@ -16,26 +16,26 @@
 // -----------------------------------------------------------------------------------------
 // | ALT TAB |  Q  |  W  |  E  |  R   |  T     |   |  Y      |  U   |  I   |  O  |  P  |  _    |
 // | CTRL ESC|  A  |  S  |  D  |  F   |  G     |   |  H      |  J   |  K   |  L  |GUI ;|CTRL ' |
-// | SHFT =  |  Z  |  X  |  C  |  V   |  B     |   |  N      |  M   |  ,   |  .  |  /  |SFT ENT|
-//                       | GUI-| CTRL`|L2 BKSP |   |L1 SPACE |L3 [  | ALT ]|
+// | SHFT `  |  Z  |  X  |  C  |  V   |  B     |   |  N      |  M   |  ,   |  .  |  /  |SFT ENT|
+//                       | CTRL-| CGUI =|L2 BKSP |   |L1 SPACE |L3 [  | ALT ]|
                         bindings = <
    &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          &kp UNDERSCORE
    &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &mt RGUI SEMI &mt RCTRL SQT
    &mt LSHFT GRAVE &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH       &mt RSHFT ENTER
-                &mt LGUI MINUS &mt LCTRL EQUAL &lt 1 BKSP  &lt 1 SPACE &lt 2 LBKT &mt RALT RBKT
+                &mt LCTRL MINUS &mt LGUI EQUAL &lt 1 BKSP  &lt 1 SPACE &mt RGUI LBKT &mt RALT RBKT
                         >;
                 };
                 right_layer {
 // -----------------------------------------------------------------------------------------
-// |   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  |
-// |   | F1 | F2 | F3 | F4 | F5 |   | LFT | DWN |  UP | RGT |     |      |
-// |   | F11| F12| F13| F14| F15|   | HOME| PGDN| PGUP| END |     |      |
-//                    |  |     |  |   |  | BT 1| BT 2 |
+// |   |  1  |  2  |  3  |  4  |  5   |   |  6  |  7  |  8  |  9  |  0  | PGUP |
+// |   | F1  | F2  | F3  | F4  | F5   |   | ^   | &   | *   | (   |  )  | PGDN |
+// |   | F11 | F12 | F13 | F14 | F15  |   | LFT | DWN | UP  | RGT | HOME| END  |
+//                 |     |     |L2 Del|   |     |     |     |
                         bindings = <
-   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6    &kp N7       &kp N8    &kp N9     &kp N0 &trans
-   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp LEFT  &kp DOWN     &kp UP    &kp RIGHT  &trans &trans
-   &trans    &kp F11      &kp F12      &kp F13      &kp F14      &kp F15        &kp HOME  &kp PG_DN    &kp PG_UP &kp END    &trans &trans
-                                       &trans       &trans       &trans         &trans    &bt BT_SEL 1 &bt BT_SEL 2
+   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5          &kp N6    &kp N7       &kp N8    &kp N9     &kp N0    &kp PG_UP
+   &trans    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5          &kp CARET &kp AMPS     &kp STAR  &kp LPAR   &kp RPAR  &kp PG_DN 
+   &trans    &kp F11      &kp F12      &kp F13      &kp F14      &kp F15         &kp LEFT  &kp DOWN     &kp UP    &kp RIGHT  &kp HOME  &kp END 
+                                       &trans       &trans       &lt 2 Del       &trans    &trans       &trans
                         >;
                 };
 
@@ -44,23 +44,23 @@
 // |  |  1  | 2   |  3  |  4  |  5  |   |  6  |   7  |   8  |   9  |  0    |  
 // | \|  !  |  @  |  #  |  $  |  %  |   | F6  |  F7  |  F8  |  F9  |  F10  |  |  
 // |  | '|' |  +  |  ~  |  {  |  }  |   |     |      |      |      |       |  |  
-//                |     |     |     |   |     |      |      |
+//                |     |     |     |   | L2 ENT  |     |      |
                         bindings = <
-   &trans    &kp N1   &kp N2   &kp N3     &kp N4     &kp N5           &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
-   &kp BSLH     &kp EXCL &kp AT   &kp HASH   &kp DLLR   &kp PERCENT      &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
-   &trans    &kp PIPE &kp PLUS &kp TILDE  &kp LBKT   &kp RBKT         &none     &none     &none     &none     &none    &trans
-                               &trans     &trans     &trans           &trans    &trans    &trans
+   &trans    &kp N1   &kp N2   &kp N3       &kp N4        &kp N5       &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
+   &kp BSLH  &kp EXCL &kp AT   &kp HASH     &kp DLLR      &kp PERCENT  &kp F6    &kp F7    &kp F8    &kp F9    &kp F10  &trans
+   &trans    &kp PIPE &kp PLUS &kp TILDE    &kp LBKT      &kp RBKT     &none     &none     &none     &none     &none    &trans
+                               &trans       &trans        &trans       &mt 2 ENT &trans    &trans
                         >;
                 };
 
                 macro_layer {
 // -----------------------------------------------------------------------------------------
-// |  |     |     |     |     |     |   |  ^  |  &   |  *   |  (   |  )    |  |  
+// | BT CLR | BT 1| BT 2 | BT 3 | BT 4 |   |  ^  |  &   |  *   |  (   |  )    |  |  
 // |  |     |     |     |     |     |   |     |      |      |      |       |  |  
 // |  |     |     |     |     |     |   |     |      |      |      |       |  |  
 //                |     |     |     |   |     |      |      |
                         bindings = <
-   &trans     &none     &none    &none      &none      &none        &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans
+   &bt BT_CLR &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4 &none        &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans
    &trans     &none     &none    &none      &none      &none        &none     &none    &none      &none      &none    &trans
    &trans     &none     &none    &none      &none      &none        &none     &none    &none      &none      &none    &trans
                         &trans   &trans     &trans     &trans       &trans    &trans
