@@ -7,6 +7,26 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&kp LGUI>;
+        };
+        combo_lctl {
+                timeout-ms = <50>;
+                key-position = <25 27>;
+                binding = <&kp LCTRL>;
+        };
+        combo_lalt {
+                timeout-ms = <50>;
+                key-position = <25 28>;
+                binding = <&kp LALT>;
+        };
+    };
+};
 
 / {
         keymap {
