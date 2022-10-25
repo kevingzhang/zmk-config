@@ -8,6 +8,21 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 / {
+        macros {
+                ctrl_space: ctrl_space {
+                        label = "ctrl_space";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp SPACE>
+                                , <&macro_release &kp LCTRL>
+                                ;
+                };
+        }; 
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
         combo_lgui {
@@ -85,9 +100,26 @@
                 key-positions = <8 9>;
                 bindings = <&kp END>;
         };
-    };
-};
-
+        combo_lshift {
+                timeout-ms = <50>;
+                key-positions = <26 28>;
+                bindings = <&kp LSHFT>;
+        };
+        combo_rshift {
+                timeout-ms = <50>;
+                key-positions = <31 33>;
+                bindings = <&kp RSHFT>;
+        };
+        combo_lctrl_space {
+                timeout-ms = <50>;
+                key-positions = <28 29>;
+                bindings = <&ctrl_space>;
+        };
+        combo_rctrl_space {
+                timeout-ms = <50>;
+                key-positions = <30 31>;
+                bindings = <&ctrl_space>;
+        };
 / {
         keymap {
                 compatible = "zmk,keymap";
