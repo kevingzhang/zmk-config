@@ -19,6 +19,24 @@
 				, <&macro_release &kp LCTRL>
 				;
 		};
+		gui_ctrl: gui_ctrl{
+			label = "gui_ctrl";
+			compatible = "zmk,behavior-macro";
+			bindings
+				= <&macro_press &kp LCTRL &kp LGUI>
+				, <&macro_pause_for_release>
+				, <&macro_release &kp LCTRL &kp LGUI>
+				;
+		};
+		gui_alt: gui_alt{
+			label = "gui_alt";
+			compatible = "zmk,behavior-macro";
+			bindings
+				= <&macro_press &kp LALT &kp LGUI>
+				, <&macro_pause_for_release>
+				, <&macro_release &kp LALT &kp LGUI>
+				;
+		};
 	}; 
 };
 
@@ -55,6 +73,26 @@
 				key-positions = <31 34>;
 				bindings = <&kp RALT>;
 			};
+			combo_lgui_ctrl {
+				timeout-ms = <50>;
+				key-positions = <25 26 27>;
+				bindings = <&gui_ctrl>;
+			};
+			combo_lgui_alt {
+				timeout-ms = <50>;
+				key-positions = <25 26 28>;
+				bindings = <&gui_alt>;
+			};
+			combo_rgui_ctrl {
+				timeout-ms = <50>;
+				key-positions = <32 33 34>;
+				bindings = <&gui_ctrl>;
+			};
+			combo_rgui_alt {
+				timeout-ms = <50>;
+				key-positions = <31 33 34>;
+				bindings = <&gui_alt>;
+			};
 			combo_enter {
 				timeout-ms = <50>;
 				key-positions = <21 22>;
@@ -62,13 +100,23 @@
 			};
 			combo_backspace {
 				timeout-ms = <50>;
-				key-positions = <15 16>;
+				key-positions = <9 10>;
 				bindings = <&kp BKSP>;
 			};
-			combo_del {
+			combo_dash {
 				timeout-ms = <50>;
 				key-positions = <16 17>;
-				bindings = <&kp DEL>;
+				bindings = <&kp MINUS>;
+			};
+			combo_equal {
+				timeout-ms = <50>;
+				key-positions = <15 16>;
+				bindings = <&kp EQUAL>;
+			};
+			combo_tab {
+				timeout-ms = <50>;
+				key-positions = <14 15>;
+				bindings = <&kp TAB>;
 			};
 			combo_down {
 				timeout-ms = <50>;
@@ -129,12 +177,12 @@
 		default_layer {
 // -----------------------------------------------------------------------------------------
 // | ALT TAB |  Q  |  W  |  E  |  R   |  T     |   |  Y      |  U   |  I   |  O  |  P  |  _    |
-// | CTRL ESC|  A  |  S  |  D  |  F   |  G     |   |  H      |  J   |  K   |  L  |GUI ;|CTRL ' |
+// | CTRL ESC|  A  |  S  |  D  |  F   |  G     |   |  H      |  J   |  K   |  L  | ;| ' |
 // | SHFT `  |  Z  |  X  |  C  |  V   |  B     |   |  N      |  M   |  ,   |  .  |  /  |SFT ENT|
 //                       | CTRL-| CGUI =|L2 BKSP |   |L1 SPACE |GUI [  | ALT ]|
 			bindings = <
-   &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          &mt RALT UNDERSCORE
-   &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
+   &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          &kp UNDERSCORE
+   &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI       &kp SQT
    &mt LSHFT GRAVE &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH       &mt RSHFT ENTER
 		&mt LCTRL MINUS &mt LGUI EQUAL &lt 2 BKSP  &lt 1 SPACE &mt RGUI LBKT &mt RALT RBKT
 			>;
