@@ -22,6 +22,7 @@
 		gui_ctrl: gui_ctrl{
 			label = "gui_ctrl";
 			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
 			bindings
 				= <&macro_press &kp LCTRL &kp LGUI>
 				, <&macro_pause_for_release>
@@ -31,6 +32,7 @@
 		gui_alt: gui_alt{
 			label = "gui_alt";
 			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
 			bindings
 				= <&macro_press &kp LALT &kp LGUI>
 				, <&macro_pause_for_release>
