@@ -70,11 +70,6 @@
 				key-positions = <0 1>;
 				bindings = <&shift_tab>;
 			};
-			combo_underscore {
-				timeout-ms = <50>;
-				key-positions = <16 17>;
-				bindings = <&kp UNDERSCORE>;
-			};
 			combo_lgui {
 				timeout-ms = <50>;
 				key-positions = <25 26>;
@@ -137,13 +132,23 @@
 			};
 			combo_dash {
 				timeout-ms = <50>;
-				key-positions = <15 16>;
+				key-positions = <16 17>;
 				bindings = <&kp MINUS>;
+			};
+			combo_underscore {
+				timeout-ms = <50>;
+				key-positions = <15 16>;
+				bindings = <&kp UNDERSCORE>;
 			};
 			combo_equal {
 				timeout-ms = <50>;
 				key-positions = <14 15>;
 				bindings = <&kp EQUAL>;
+			};
+			combo_lctrl_space {
+				timeout-ms = <50>;
+				key-positions = <13 14>;
+				bindings = <&ctrl_space>;
 			};
 			combo_down {
 				timeout-ms = <50>;
@@ -184,16 +189,6 @@
 				timeout-ms = <50>;
 				key-positions = <31 33>;
 				bindings = <&kp RSHFT>;
-			};
-			combo_lctrl_space {
-				timeout-ms = <50>;
-				key-positions = <28 29>;
-				bindings = <&ctrl_space>;
-			};
-			combo_rctrl_space {
-				timeout-ms = <50>;
-				key-positions = <30 31>;
-				bindings = <&ctrl_space>;
 			};
 			combo_rmeh{
 				timeout-ms = <50>;
