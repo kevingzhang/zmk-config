@@ -70,6 +70,36 @@
 				key-positions = <0 1>;
 				bindings = <&shift_tab>;
 			};
+			combo_zero {
+				timeout-ms = <50>;
+				key-positions = <9 10>;
+				bindings = <&kp N0>;
+			};
+			combo_one {
+				timeout-ms = <50>;
+				key-positions = <12 1>;
+				bindings = <&kp N1>;
+			};
+			combo_two {
+				timeout-ms = <50>;
+				key-positions = <1 2>;
+				bindings = <&kp N2>;
+			};
+			combo_three {
+				timeout-ms = <50>;
+				key-positions = <2 3>;
+				bindings = <&kp N3>;
+			};
+			combo_four {
+				timeout-ms = <50>;
+				key-positions = <3 4>;
+				bindings = <&kp N4>;
+			};
+			combo_five {
+				timeout-ms = <50>;
+				key-positions = <4 5>;
+				bindings = <&kp N5>;
+			};
 			combo_lgui {
 				timeout-ms = <50>;
 				key-positions = <25 26>;
