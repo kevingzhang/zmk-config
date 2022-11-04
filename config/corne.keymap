@@ -24,6 +24,7 @@
 			bindings = <&mt RGUI UNDERSCORE>, <&kp MINUS>, <&kp EQUAL>;
 		};
 	};
+};
 
 / {
 	macros {
