@@ -8,6 +8,26 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 / {
+	behaviors {
+		td_space: tap_dance_0 {
+			compatible = "zmk,behavior-tap-dance";
+			label = "TAP_DANCE_0";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&lt 1 SPACE>, <&kp ENTER>
+		};
+	};
+	behaviors {
+		td_dash: tap_dance_1 {
+			compatible = "zmk,behavior-tap-dance";
+			label = "TAP_DANCE_1";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&mt RGUI UNDERSCORE>, <&kp MINUS>, <&kp EQUAL>
+		};
+	};
+
+/ {
 	macros {
 		ctrl_space: ctrl_space {
 			label = "ctrl_space";
@@ -157,7 +177,7 @@
 			};
 			combo_pgup {
 				timeout-ms = <50>;
-				key-positions = <9 10>;
+				key-positions = <10 23>;
 				bindings = <&kp PG_UP>;
 			};
 			combo_dash {
@@ -241,7 +261,7 @@
    &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          &kp BKSP
    &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI       &kp SQT
    &mt LSHFT GRAVE &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH       &mt RSHFT ENTER
-		&mt LCTRL LBKT &mt LGUI ENTER &lt 2 BKSP  &lt 1 SPACE &mt RGUI UNDERSCORE &mt RALT RBKT
+		&mt LCTRL LBKT &mt LGUI ENTER &lt 2 BKSP  &td_space &td_dash &mt RALT RBKT
 			>;
 		};
 		right_layer {
