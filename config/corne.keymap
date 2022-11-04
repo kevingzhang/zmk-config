@@ -16,8 +16,6 @@
 			tapping-term-ms = <200>;
 			bindings = <&lt 1 SPACE>, <&kp ENTER>
 		};
-	};
-	behaviors {
 		td_dash: tap_dance_1 {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_1";
