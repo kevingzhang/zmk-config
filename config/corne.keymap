@@ -14,14 +14,14 @@
 			label = "TAP_DANCE_0";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&lt 1 SPACE>, <&kp ENTER>
+			bindings = <&lt 1 SPACE>, <&kp ENTER>;
 		};
 		td_dash: tap_dance_1 {
 			compatible = "zmk,behavior-tap-dance";
 			label = "TAP_DANCE_1";
 			#binding-cells = <0>;
 			tapping-term-ms = <200>;
-			bindings = <&mt RGUI UNDERSCORE>, <&kp MINUS>, <&kp EQUAL>
+			bindings = <&mt RGUI UNDERSCORE>, <&kp MINUS>, <&kp EQUAL>;
 		};
 	};
 
