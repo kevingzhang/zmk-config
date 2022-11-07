@@ -8,32 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 / {
-	behaviors {
-		td_dash: tap_dance_1 {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_1";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp COMMA>,  <&kp EQUAL>;
-		};
-		td_lpar: tap_dance_2 {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_2";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp SEMI>, <&kp LPAR>;
-		};
-		td_rpar: tap_dance_3 {
-			compatible = "zmk,behavior-tap-dance";
-			label = "TAP_DANCE_3";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp SQT>, <&kp RPAR>;
-		};
-	};
-};
-
-/ {
 	macros {
 		ctrl_space: ctrl_space {
 			label = "ctrl_space";
@@ -186,10 +160,15 @@
 				key-positions = <10 23>;
 				bindings = <&kp PG_UP>;
 			};
-			combo_dash {
+			combo_lpar {
 				timeout-ms = <50>;
 				key-positions = <15 16>;
-				bindings = <&kp MINUS>;
+				bindings = <&kp LPAR>;
+			};
+			combo_rpar {
+				timeout-ms = <50>;
+				key-positions = <16 17>;
+				bindings = <&kp RPAR>;
 			};
 			combo_equal {
 				timeout-ms = <50>;
@@ -264,9 +243,9 @@
 // | SHFT `  |  Z  |  X  |  C  |  V   |  B     |   |  N      |  M   |  ,   |  .  |  /  |SFT ENT|
 //                       | CTRL [| CGUI Enter|L2 BKSP |   |L1 SPACE |GUI _  | ALT ]|
 			bindings = <
-   &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P          &kp BKSP
-   &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &td_lpar			&td_rpar
-   &mt LSHFT GRAVE &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &td_dash   &kp DOT &kp FSLH       &mt RSHFT MINUS
+   &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P         &kp BKSP
+   &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI			&kp SQT
+   &mt LSHFT GRAVE &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA   &kp DOT &kp FSLH    &mt RSHFT MINUS
 		&mt LCTRL LBKT &mt LGUI ENTER &lt 2 BKSP  &lt 1 SPACE &mt RGUI UNDERSCORE &mt RALT RBKT
 			>;
 		};
