@@ -85,7 +85,7 @@
 			compatible = "zmk,combos";
 			combo_grave {
 				timeout-ms = <25>;
-				key-position = <13 24>;
+				key-positions = <13 24>;
 				bindings = <&kp GRAVE>;
 			};
 			combo_shift_tab {
