@@ -21,7 +21,7 @@
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&ESC>, <&BKSP>;
+            bindings = <&kp ESC>, <&kp BKSP>;
         };
     };
 / {
@@ -268,7 +268,7 @@
    &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P         &kp MINUS
    &td1            &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI			&kp SQT
    &td0            &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA   &kp DOT &kp FSLH    &td0
-		&mt LCTRL LBKT &mt LGUI ENTER &lt 2 BKSP  &lt 1 SPACE &mt RGUI UNDERSCORE &mt RALT RBKT
+	 &mt LCTRL LBKT &mt LGUI ENTER &lt 2 BKSP  &lt 1 SPACE &mt RGUI UNDERSCORE &mt RALT RBKT
 			>;
 		};
 		right_layer {
