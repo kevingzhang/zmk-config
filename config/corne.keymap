@@ -24,6 +24,7 @@
             bindings = <&kp ESC>, <&kp BKSP>;
         };
     };
+	};
 / {
 	macros {
 		ctrl_space: ctrl_space {
