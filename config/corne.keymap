@@ -123,56 +123,6 @@
 				key-positions = <4 5>;
 				bindings = <&kp N5>;
 			};
-			combo_lgui {
-				timeout-ms = <25>;
-				key-positions = <25 26>;
-				bindings = <&kp LGUI>;
-			};
-			combo_lctl {
-				timeout-ms = <25>;
-				key-positions = <25 27>;
-				bindings = <&kp LCTRL>;
-			};
-			combo_lalt {
-				timeout-ms = <25>;
-				key-positions = <25 28>;
-				bindings = <&kp LALT>;
-			};
-			combo_rgui {
-				timeout-ms = <25>;
-				key-positions = <33 34>;
-				bindings = <&kp RGUI>;
-			};
-			combo_rctl {
-				timeout-ms = <25>;
-				key-positions = <32 34>;
-				bindings = <&kp RCTRL>;
-			};
-			combo_ralt {
-				timeout-ms = <25>;
-				key-positions = <31 34>;
-				bindings = <&kp RALT>;
-			};
-			combo_lgui_ctrl {
-				timeout-ms = <50>;
-				key-positions = <25 26 27>;
-				bindings = <&gui_ctrl>;
-			};
-			combo_lgui_alt {
-				timeout-ms = <50>;
-				key-positions = <25 26 28>;
-				bindings = <&gui_alt>;
-			};
-			combo_rgui_ctrl {
-				timeout-ms = <50>;
-				key-positions = <32 33 34>;
-				bindings = <&gui_ctrl>;
-			};
-			combo_rgui_alt {
-				timeout-ms = <50>;
-				key-positions = <31 33 34>;
-				bindings = <&gui_alt>;
-			};
 			combo_pgdn {
 				timeout-ms = <25>;
 				key-positions = <21 22>;
@@ -233,16 +183,6 @@
 				key-positions = <8 9>;
 				bindings = <&kp END>;
 			};
-			combo_lshift {
-				timeout-ms = <25>;
-				key-positions = <26 28>;
-				bindings = <&kp LSHFT>;
-			};
-			combo_rshift {
-				timeout-ms = <25>;
-				key-positions = <31 33>;
-				bindings = <&kp RSHFT>;
-			};
 			combo_rmeh{
 				timeout-ms = <50>;
 				key-positions = <31 32 33>;
@@ -255,6 +195,13 @@
 			};
     };
 };
+
+&sk {
+    release-after-ms = <1000>;
+    quick-release;
+    /delete-property/ ignore-modifiers;
+};
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
