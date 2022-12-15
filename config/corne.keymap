@@ -144,8 +144,8 @@
 				bindings = <&kp RPAR>;
 			};
 			combo_lctrl_space {
-				timeout-ms = <25>;
-				key-positions = <13 14>;
+				timeout-ms = <50>;
+				key-positions = <26 27 28>;
 				bindings = <&ctrl_space>;
 			};
 			combo_down {
@@ -183,11 +183,6 @@
 				key-positions = <31 32 33>;
 				bindings = <&meh>;
 			};
-			combo_lmeh{
-				timeout-ms = <50>;
-				key-positions = <26 27 28>;
-				bindings = <&meh>;
-			};
     };
 };
 
@@ -203,10 +198,10 @@
 
 		default_layer {
 // -----------------------------------------------------------------------------------------
-// | ALT TAB |  Q  |  W  |  E  |  R   |  T     |   |  Y      |  U   |  I   |  O  |  P  |  _    |
-// | CTRL ESC|  A  |  S  |  D  |  F   |  G     |   |  H      |  J   |  K   |  L  | ;| ' |
-// | SHFT `  |  Z  |  X  |  C  |  V   |  B     |   |  N      |  M   |  ,   |  .  |  /  |SFT ENT|
-//                       | CTRL [| CGUI Enter|L2 BKSP |   |L1 SPACE |GUI _  | ALT ]|
+// | ALT TAB         |  Q  |  W  |  E    |  R        |  T     |   |  Y      |  U   |  I   |  O  |  P  |  _    |
+// | CTRL ESC        |  A  |  S  |  D    |  F        |  G     |   |  H      |  J   |  K   |  L  | ;| ' |
+// | SHFT caps_word  |  Z  |  X  |  C    |  V        |  B     |   |  N      |  M   |  ,   |  .  |  /  |SFT ENT|
+//                               | CTRL [| CGUI Enter|L2 BKSP |   |L1 SPACE |GUI _  | ALT ]|
 			bindings = <
    &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P         &kp MINUS
    &td1            &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI			&kp SQT
