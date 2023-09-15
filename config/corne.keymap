@@ -198,9 +198,9 @@
 // | SHFT caps_word  |  Z  |  X  |  C    |  V        |  B     |   |  N      |  M   |  ,    |  .  |  /  |SFT ENT|
 //                               | CTRL[ | CGUI Enter|L2 BKSP |   |L1 SPACE |GUI _ | ALT ] |
 			bindings = <
-   &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P         &kp MINUS
+   &mt LALT TAB    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P         &sys_reset
    &td1            &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI			&kp SQT
-   &td0            &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA   &kp DOT &kp FSLH    &mt RSHFT EQUAL
+   &td0            &sys_reset &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA   &kp DOT &kp FSLH    &mt RSHFT EQUAL
 	 &mt LCTRL LBKT &mt LGUI ENTER &lt 2 BKSP  &lt 1 SPACE &mt RGUI UNDERSCORE &mt RALT RBKT
 			>;
 		};
